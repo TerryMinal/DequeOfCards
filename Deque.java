@@ -1,10 +1,11 @@
 public interface Deque<T> {
 
   //first element methods
+
   // adds value at beginning of deque represented by queue
   public void addFirst(T e);
 
-  // removes first value
+  // removes first valueaa
   public T removeFrist(T e);
 
   // returns true if the given argument is in the deque

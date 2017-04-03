@@ -1,4 +1,4 @@
-public class DLNDeque {
+public class DLNDeque<T> implements Deque<T> {
 
 
 }

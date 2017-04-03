@@ -25,4 +25,6 @@ public interface Deque<T> {
 
   // returns size of deque
   public int size();
+
+  public String toString(); 
 }

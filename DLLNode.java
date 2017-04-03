@@ -46,7 +46,7 @@ public class DLLNode<T>
     DLLNode<T> oldN = _nextNode;
     _nextNode = newNext;
     //sets the next nodes previous node to this
-    newNext._beforeNode = this;
+    // newNext._beforeNode = this;
     return oldN;
   }
 
@@ -54,7 +54,7 @@ public class DLLNode<T>
     DLLNode<T> old = _beforeNode;
     _beforeNode = before;
     //sets the previous node next node to this node
-    before._nextNode = this;
+    // _beforeNode._nextNode = this;
     return old;
   }
   //--------------^  MUTATORS  ^--------------

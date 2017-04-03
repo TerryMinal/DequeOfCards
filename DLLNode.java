@@ -9,14 +9,14 @@ HW#18a: DLLNode
 * Implements a node, for use in lists and other container classes.
 *****************************************************/
 
-public class DLLNode
+public class DLLNode<T>
 {
 
-  private String _cargo;    //cargo may only be of type String
-  private DLLNode _nextNode; //pointer to next DLLNode
-  private DLLNode _beforeNode;
+  private T _cargo;    //cargo may only be of type String
+  private DLLNode<T> _nextNode; //pointer to next DLLNode<T>
+  private DLLNode<T> _beforeNode;
   // constructor -- initializes instance vars
-  public DLLNode( String value, DLLNode before, DLLNode next )
+  public DLLNode( T value, DLLNode<T> before, DLLNode<T> next )
   {
     _cargo = value;
     _nextNode = next;
@@ -25,33 +25,33 @@ public class DLLNode
 
 
   //--------------v  ACCESSORS  v--------------
-  public String getCargo() { return _cargo; }
+  public T getCargo() { return _cargo; }
 
-  public DLLNode getNext() { return _nextNode; }
+  public DLLNode<T> getNext() { return _nextNode; }
 
-  public DLLNode getBefore() { return _beforeNode; }
+  public DLLNode<T> getBefore() { return _beforeNode; }
   //--------------^  ACCESSORS  ^--------------
 
 
   //--------------v  MUTATORS  v--------------
-  public String setCargo( String newCargo )
+  public T setCargo(  T newCargo )
   {
-    String oldC = _cargo;
+    T oldC = _cargo;
     _cargo = newCargo;
     return oldC;
   }
 
-  public DLLNode setNext( DLLNode newNext )
+  public DLLNode<T> setNext( DLLNode<T> newNext )
   {
-    DLLNode oldN = _nextNode;
+    DLLNode<T> oldN = _nextNode;
     _nextNode = newNext;
     //sets the next nodes previous node to this
     newNext._beforeNode = this;
     return oldN;
   }
 
-  public DLLNode setBefore( DLLNode before) {
-    DLLNode old = _beforeNode;
+  public DLLNode<T> setBefore( DLLNode<T> before) {
+    DLLNode<T> old = _beforeNode;
     _beforeNode = before;
     //sets the previous node next node to this node
     before._nextNode = this;
@@ -71,7 +71,7 @@ public class DLLNode
     //Below is an exercise in creating a linked list...
 
     //Create a node
-    DLLNode first = new DLLNode( "cat", null, null );
+    DLLNode<String> first = new DLLNode<String>( "cat", null, null );
 
     //Create a new node after the first
     first.setNext( new DLLNode( "dog", first, null ) );

@@ -5,7 +5,7 @@ public interface Deque<T> {
   public void addFirst(T e);
 
   // removes first value
-  public T removeFrist(T e);
+  public T removeFirst(T e);
 
   // returns true if the given argument is in the deque
   public boolean contains(T e);

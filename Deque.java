@@ -5,28 +5,23 @@ public interface Deque<T> {
   // adds value at beginning of deque represented by queue
   public void addFirst(T e);
 
-<<<<<<< HEAD
   // removes first valueaa
-  public T removeFrist(T e);
-=======
-  // removes first value
-  public T removeFirst(T e);
->>>>>>> 44a193afdf78d544d9165c74a401aed2d798e723
+  public T removeFirst();
 
   // returns true if the given argument is in the deque
   public boolean contains(T e);
 
   // returns value at beginning of deque
-  public T peekFirst(T e);
+  public T peekFirst();
 
   // adds value at end of deque represented by queue
   public void addLast(T e);
 
   // removes value at end of deque
-  public T removeLast(T e);
+  public T removeLast();
 
   // returns value at end of deque
-  public T peekLast(T e);
+  public T peekLast();
 
   // returns size of deque
   public int size();

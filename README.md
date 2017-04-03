@@ -1,7 +1,7 @@
 # DequeOfCards
 Team DequeOfCards -- Fabiola Radosav, Terry Guan, Max Korsun
 
-# Interface/Method Selections
+## Interface/Method Selections
 addFirst(T e) - Neccesary to add Objects to the front of the queue.
 
 addLast(T e) - Neccesary to add Objects to the back of the queue.

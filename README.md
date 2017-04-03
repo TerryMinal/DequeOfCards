@@ -18,14 +18,14 @@ contains(T e) - not needed, but simple enough to implement and adds convenience.
 
 size() - Allows you to see the current length of the Deque.
 
-#Reasoning for Method Selections
+# Reasoning for Method Selections
 addFirst, addLast, removeFirst, removeLast, peekFirst, peekLast are standard methods for a deque and
 are usually used for unlimited capacity deques. It was fitting to follow the standard and use those
 method signatures. Contain was more for convenience; it is useful to perform a search of whether an
 element exists in a deque or not. Size was also made for convenience sake. Size is relatively easy
 to keep track and is useful information.
 
-#Reasoning for Choosing Doubly Linked Nodes
+# Reasoning for Choosing Doubly Linked Nodes
 Doubly linked nodes offer the most mutability with its ability to easily remove and add elements to
 the front and end. Adding is just a simple adding of a new object with some data to the front or end
 and declaring that the front or end with a reference variable. There is no need to fidget around with the

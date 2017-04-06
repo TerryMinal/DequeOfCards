@@ -16,12 +16,12 @@ public class DLNDeque<T> implements Deque<T> {
   }
 
   public void addFirst(T e) {
-    if (_size == 0) {
+    if (_size == 0) {// IF nothing is in the queue, add the first thing to the front, which is also the end
       _front = new DLLNode<T>(e, null, null);
       _end = _front;
     }
     else {
-      _front.setBefore(new DLLNode<T>(e, null, _front));
+      _front.setBefore(new DLLNode<T>(e, null, _front));//otherwise, add something infront of the front and make it the front
       _front = _front.getBefore();
     }
     _size++;
@@ -29,9 +29,9 @@ public class DLNDeque<T> implements Deque<T> {
 
   public T removeFirst() {
     if (_size == 0)
-      throw new NoSuchElementException();
+      throw new NoSuchElementException();//cant remove anything
     T ret = _front.getCargo();
-    _front = _front.getNext();
+    _front = _front.getNext();//otherwise set _front to the next thing in the queue
     _size--;
     return ret;
   }
@@ -39,7 +39,7 @@ public class DLNDeque<T> implements Deque<T> {
   // returns true if the given argument is in the deque
   public boolean contains(T e) {
     DLLNode<T> current = _front;
-    for (int i = 0; i < _size; i++) {
+    for (int i = 0; i < _size; i++) {//Go through the queue until you do or dont find e
       if (current.getCargo().equals(e))
         return true;
       current = current.getNext();
@@ -50,11 +50,11 @@ public class DLNDeque<T> implements Deque<T> {
   // adds value at end of deque represented by queue
   public void addLast(T e) {
     if (_size == 0) {
-      _end = new DLLNode<T>(e, null, null);
+      _end = new DLLNode<T>(e, null, null);// Same thing as in addFront()
       _front = _end;
     }
     else {
-      _end.setNext(new DLLNode<T>(e, _end, null));
+      _end.setNext(new DLLNode<T>(e, _end, null));// add something after the last thing and make that the new end
       _end = _end.getNext();
     }
     _size++;
@@ -63,9 +63,9 @@ public class DLNDeque<T> implements Deque<T> {
   // removes value at end of deque
   public T removeLast() {
     if (_size == 0)
-      throw new NoSuchElementException();
+      throw new NoSuchElementException();//If nothing to remove, you cant remove
     T ret = _end.getCargo();
-    _end = _end.getBefore();
+    _end = _end.getBefore();//set end to the thing before end
     _size--;
     return ret;
   }

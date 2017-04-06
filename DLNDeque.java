@@ -8,7 +8,7 @@ import java.io.*;
 public class DLNDeque<T> implements Deque<T> {
 
   private DLLNode<T> _front, _end;
-  public int _size;
+  private int _size;
 
   public DLNDeque() {
     _front = _end = null;
